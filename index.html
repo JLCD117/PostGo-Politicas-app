@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Victamnews Project</title>
+    <title>Política de Privacidad - PostGo</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,15 +24,15 @@
         }
 
         h1 {
-            color: #1a2a6c;
-            border-bottom: 3px solid #1a2a6c;
+            color: #2563eb;
+            border-bottom: 3px solid #2563eb;
             padding-bottom: 10px;
         }
 
         h2 {
-            color: #1a2a6c;
+            color: #1e40af;
             margin-top: 35px;
-            border-left: 4px solid #1a2a6c;
+            border-left: 4px solid #2563eb;
             padding-left: 15px;
         }
 
@@ -43,10 +43,10 @@
         }
 
         .highlight {
-            background: #eef2f7;
+            background: #eff6ff;
             padding: 20px;
             border-radius: 5px;
-            border: 1px solid #d1d9e6;
+            border: 1px solid #bfdbfe;
             margin: 20px 0;
         }
 
@@ -55,6 +55,14 @@
             margin-top: 40px;
             font-size: 0.9em;
             color: #777;
+        }
+
+        .contact-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -66,87 +74,67 @@
 
         <section>
             <h2>1. Introducción</h2>
-            <p>La presente Política de Privacidad establece los términos en que <strong>[Tu Nombre Completo]</strong>,
-                como desarrollador independiente, utiliza y protege la información que es proporcionada por los usuarios
-                al momento de utilizar la aplicación <strong>[Nombre de tu App en Meta]</strong>. Estoy comprometido con
-                la seguridad de los datos de mis usuarios y el cumplimiento de las políticas de la plataforma Meta.</p>
+            <p>La aplicación <strong>PostGo</strong> (en adelante, "la Aplicación") está diseñada para facilitar la
+                publicación y gestión de notas periodísticas en páginas de la plataforma Meta. Esta política describe
+                cómo manejamos la información técnica necesaria para operar estos servicios, garantizando la privacidad
+                y seguridad de los usuarios.</p>
         </section>
 
         <section>
-            <h2>2. Información Recopilada y Uso de la API de Meta</h2>
-            <p>Nuestra aplicación utiliza los servicios de la API de Graph de Meta para interactuar con las Páginas de
-                Facebook del usuario. Los datos a los que accedemos incluyen:</p>
+            <h2>2. Uso de la API de Meta y Datos Accedidos</h2>
+            <p>PostGo utiliza la API de Graph de Meta para interactuar con las funciones de publicación de Facebook.
+                Nuestra interacción se limita estrictamente a:</p>
             <ul>
-                <li><strong>Identificación de Usuario:</strong> ID de usuario de Facebook para autenticación.</li>
-                <li><strong>Información de Páginas:</strong> Nombre e ID de las páginas que usted administra (solo si
-                    otorga el permiso expreso).</li>
-                <li><strong>Permisos de Publicación:</strong> Acceso para publicar contenido (notas periodísticas) en su
-                    nombre en las páginas seleccionadas.</li>
+                <li><strong>Autenticación:</strong> Uso de identificadores técnicos únicos para gestionar la sesión del
+                    usuario.</li>
+                <li><strong>Tokens de Acceso de Página:</strong> Gestión de permisos temporales para publicar contenido
+                    en las páginas que el usuario autorice explícitamente.</li>
+                <li><strong>Contenido de Publicación:</strong> Procesamiento de los textos, enlaces y medios que el
+                    usuario desea publicar en sus sitios de noticias.</li>
             </ul>
-            <p><strong>Importante:</strong> Esta aplicación NO recopila ni almacena sus contraseñas, correos
-                electrónicos personales de contacto fuera de los proporcionados por el inicio de sesión, ni información
-                financiera.</p>
+            <p><strong>Aclaración importante:</strong> PostGo no tiene acceso a sus contraseñas personales, mensajes
+                privados, información de contacto de sus amigos ni datos de perfil que no sean públicos o estrictamente
+                necesarios para la publicación en páginas.</p>
         </section>
 
         <section>
-            <h2>3. Finalidad del Tratamiento de Datos</h2>
-            <p>La información obtenida a través de los permisos de Meta tiene como único fin:</p>
-            <ul>
-                <li>Permitir el funcionamiento técnico de la aplicación (vinculación entre su cuenta y sus páginas).
-                </li>
-                <li>Facilitar la automatización y gestión de publicaciones de noticias de forma eficiente.</li>
-                <li>Mejorar la experiencia de usuario dentro de la interfaz de la herramienta.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>4. Transferencia de Datos a Terceros</h2>
-            <p>Se garantiza que los datos obtenidos mediante la API de Meta <strong>no serán vendidos, cedidos,
-                    distribuidos ni compartidos</strong> con terceros bajo ninguna circunstancia, excepto que sea
-                requerido por un juez con una orden judicial.</p>
+            <h2>3. Almacenamiento y Protección</h2>
+            <p>Como política de privacidad por diseño, <strong>PostGo no almacena datos personales</strong> en bases de
+                datos externas de forma permanente. Los tokens de acceso se manejan de manera cifrada y solo se utilizan
+                para ejecutar las solicitudes de publicación enviadas por el usuario. No compartimos, vendemos ni
+                distribuimos ninguna información obtenida a través de Meta con terceros.</p>
         </section>
 
         <section class="highlight">
-            <h2>5. Eliminación de Datos (Data Deletion)</h2>
-            <p>En cumplimiento con las políticas de Meta, proporcionamos los siguientes métodos para que el usuario
-                elimine su información:</p>
+            <h2>4. Control del Usuario y Eliminación de Datos</h2>
+            <p>El usuario mantiene el control total sobre su información y puede revocar el acceso de la aplicación en
+                cualquier momento:</p>
             <ol>
-                <li><strong>Revocación de Permisos:</strong> Puede dirigirse a su cuenta de Facebook, sección
-                    "Configuración y Privacidad" > "Configuración" > "Aplicaciones y sitios web" y eliminar los permisos
-                    de nuestra aplicación.</li>
-                <li><strong>Solicitud Directa:</strong> Puede enviar un correo electrónico a
-                    <strong>[TU_CORREO_AQUÍ]</strong> solicitando la eliminación definitiva de cualquier token o
-                    identificador asociado a su cuenta en nuestros registros temporales. Procesaremos la solicitud en un
-                    plazo menor a 72 horas.</li>
+                <li><strong>Revocación desde Meta:</strong> El usuario puede desvincular PostGo desde la configuración
+                    de su cuenta de Facebook, en el apartado "Aplicaciones y sitios web".</li>
+                <li><strong>Solicitud de Limpieza:</strong> Para solicitar la eliminación de cualquier registro técnico
+                    residual o token asociado a su ID, puede enviar un correo electrónico al contacto de soporte
+                    indicado abajo. Las solicitudes se procesan en un periodo máximo de 72 horas.</li>
             </ol>
         </section>
 
         <section>
-            <h2>6. Seguridad de la Información</h2>
-            <p>Aunque no almacenamos datos personales permanentes en servidores externos, los tokens de acceso
-                temporales se manejan bajo protocolos de cifrado estándar para evitar el acceso no autorizado o el uso
-                indebido de los permisos de publicación.</p>
+            <h2>5. Cumplimiento Legal</h2>
+            <p>Esta política se alinea con los requerimientos de protección de datos personales y los términos de
+                servicio de la plataforma Meta para desarrolladores.</p>
         </section>
 
-        <section>
-            <h2>7. Cambios en la Política</h2>
-            <p>Me reservo el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.
-                Se recomienda revisar esta página periódicamente para asegurarse de que está de acuerdo con dichos
-                cambios.</p>
-        </section>
-
-        <div class="contact">
-            <h2>Contacto</h2>
-            <p>Si tiene preguntas sobre esta política o el manejo de sus datos, puede contactarme directamente:</p>
-            <p><strong>Desarrollador:</strong> [Tu Nombre Completo]<br>
-                <strong>Correo:</strong> [TU_CORREO_AQUÍ]<br>
-                <strong>Ubicación:</strong> Ciudad Victoria, Tamaulipas, México.
-            </p>
+        <div class="contact-box">
+            <h2>Contacto de Soporte</h2>
+            <p>Para consultas técnicas o relacionadas con la privacidad de los datos, puede contactar al equipo de
+                desarrollo:</p>
+            <p><strong>Proyecto:</strong> PostGo - Herramienta de Publicación Automatizada</p>
+            <p><strong>Correo electrónico:</strong> [TU_CORREO_AQUÍ]</p>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 [Tu Nombre] - Victamnews Project. Todos los derechos reservados.
+        &copy; 2026 PostGo Project. Desarrollado para la gestión de medios digitales.
     </footer>
 </body>
 
